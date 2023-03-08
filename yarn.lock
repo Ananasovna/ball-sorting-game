@@ -634,6 +634,18 @@ doctrine@^3.0.0:
   dependencies:
     esutils "^2.0.2"
 
+effector-react@^22.5.0:
+  version "22.5.0"
+  resolved "https://registry.yarnpkg.com/effector-react/-/effector-react-22.5.0.tgz#97e6095c3410b1681036c6738c549e6e757a6b9d"
+  integrity sha512-f9aOWFKr4i6fhdoV1uHa2n89f9+9edmOJL9UhMgjUcs2al3fyh3R5j1WDx0cHU6TuFtrlnFsulbhd2D/8q7reQ==
+  dependencies:
+    use-sync-external-store "^1.0.0"
+
+effector@^22.5.2:
+  version "22.5.2"
+  resolved "https://registry.yarnpkg.com/effector/-/effector-22.5.2.tgz#1f0e6d44760c2c648670f5fa3dcec0218a912ac7"
+  integrity sha512-xEINDCZYZdtmyS9LbjaLMUF1PBmlm3LqPowaKP2sNdBUDHirfGXhWzczWkufdGTJFGBN5sB2pWipmSIUMprbPg==
+
 electron-to-chromium@^1.4.284:
   version "1.4.322"
   resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.322.tgz#e0afa1d115b66c1d47869db40d8f2f3729cecc16"
@@ -2261,6 +2273,11 @@ uri-js@^4.2.2:
   integrity sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==
   dependencies:
     punycode "^2.1.0"
+
+use-sync-external-store@^1.0.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/use-sync-external-store/-/use-sync-external-store-1.2.0.tgz#7dbefd6ef3fe4e767a0cf5d7287aacfb5846928a"
+  integrity sha512-eEgnFxGQ1Ife9bzYs6VLi8/4X6CObHMw9Qr9tPY43iKwsPw8xE8+EFsf/2cFZ5S3esXgpWgtSCtLNS41F+sKPA==
 
 util-deprecate@^1.0.2:
   version "1.0.2"

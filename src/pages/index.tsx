@@ -1,21 +1,16 @@
-import styles from '@/styles/Home.module.css'
+import { Button } from '@/common/Button'
+import { Playground } from '@/components/Playground';
+import { StartScreen } from '@/components/StartScreen';
+import { $state } from '@/store/store';
+import { useStore } from 'effector-react'
 import Head from 'next/head'
 
 export default function Home() {
-  return (
-    <>
-      <Head>
-        <title>Create Next App</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <main className={styles.main}>
-        <div className="text-xl">
-          <div>hi there</div> 
-          <div>hi there</div> 
-        </div>
-        
-      </main>
-    </>
-  )
+  const state = useStore($state);
+
+  if (state === 'start') {
+    return <StartScreen/>
+  }
+
+  return <Playground />
 }
