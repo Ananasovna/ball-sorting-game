@@ -1,4 +1,5 @@
 import { Button } from "@/common/Button"
+import { startClicked } from "@/store/store"
 
 
 export const StartScreen: React.FC = () => {
@@ -7,8 +8,8 @@ export const StartScreen: React.FC = () => {
   return (
     <main className='wrapper'>
       <div className='text-3xl text-white tracking-wider mb-10'>Balls sorting game</div>
-      <div>
-        <Button title='Начать игру' />
+      <div onClick={startClicked}>
+        <Button title='Start the game' />
       </div>
     </main>
   )
