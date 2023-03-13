@@ -1,12 +1,14 @@
 import { Button } from "@/common/Button"
-import { $tubes, toMainMenuClicked } from "@/store/store";
-import { useList } from "effector-react"
+import { $moves, $tubes, restartClicked, toMainMenuClicked } from "@/store/store";
+import { useList, useStore } from "effector-react"
 import { Tube } from "./Tube"
 import { WonScreen } from "./WonScreen";
 
 
 
 export const Playground: React.FC = () => {
+  const moves = useStore($moves);
+
   const isWon = false;
   const tubes = useList($tubes,
     ({ balls }, index) =>
@@ -21,8 +23,10 @@ export const Playground: React.FC = () => {
         <div onClick={toMainMenuClicked}>
           <Button title='←' />
         </div>
-        <Button title='Restart' />
-        <div className='text-white tracking-wider'>Moves:</div>
+        <div onClick={restartClicked}>
+          <Button title='Restart' />
+        </div>
+        <div className='text-white tracking-wider'>Moves: {moves}</div>
       </div>
       <div className='flex mt-12'>
         {tubes}
