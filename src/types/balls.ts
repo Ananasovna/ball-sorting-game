@@ -1,4 +1,4 @@
-export interface Tube {
+export type Tube = {
   balls: BallColor[],
 }
 

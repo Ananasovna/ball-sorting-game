@@ -1,5 +1,5 @@
 import { Button } from "@/common/Button"
-import { $moves, $tubes, restartClicked, toMainMenuClicked } from "@/store/store";
+import { $field, $moves, $tubes, restartClicked, toMainMenuClicked, tubeClicked, tubeSelected } from "@/store/store";
 import { useList, useStore } from "effector-react"
 import { Tube } from "./Tube"
 import { WonScreen } from "./WonScreen";
@@ -10,10 +10,10 @@ export const Playground: React.FC = () => {
   const moves = useStore($moves);
 
   const isWon = false;
-  const tubes = useList($tubes,
-    ({ balls }, index) =>
+  const tubes = useList($field, 
+    ({ balls, over}, index) =>
       <div>
-        <Tube tube={{ balls, over: null, complete: false }} position={index} />
+        <Tube tube={{ balls, over, complete: false }} position={index} onClick={tubeClicked}/>
       </div>
   )
 

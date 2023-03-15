@@ -8,11 +8,12 @@ interface TubeProps {
     complete: boolean,
   },
   position: number,
+  onClick: React.EventHandler<React.MouseEvent<HTMLDivElement>>,
 }
 
-export const Tube: React.FC<TubeProps> = ({ tube, position }) => {
+export const Tube: React.FC<TubeProps> = ({ tube, position, onClick }) => {
   return (
-    <div data-position={position} className='flex flex-col p-4'>
+    <div data-position={position} className='flex flex-col p-4' onClick={onClick}>
       <div className='flex h-12 flex-col items-center justify-center border-b-4 border-b-white'>
         {tube.over !== null ? <Ball ball={tube.over} /> : null}
       </div>
