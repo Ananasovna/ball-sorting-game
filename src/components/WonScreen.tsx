@@ -3,7 +3,7 @@ import { $moves, toMainMenuClicked } from "@/store/store";
 import { useStore } from "effector-react";
 
 export const WonScreen: React.FC = () => {
-  const moves= useStore($moves);
+  const moves = useStore($moves);
 
   return (
     <div className='flex flex-col items-center gap-5 fixed inset-0 backdrop-blur-sm pt-20 bg-white/75'>

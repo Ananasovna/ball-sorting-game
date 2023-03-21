@@ -1,19 +1,20 @@
-import { Button } from "@/common/Button"
-import { $field, $moves, $tubes, restartClicked, toMainMenuClicked, tubeClicked, tubeSelected } from "@/store/store";
-import { useList, useStore } from "effector-react"
-import { Tube } from "./Tube"
+import { Button } from "@/common/Button";
+import { $field, $moves, $state, restartClicked, toMainMenuClicked, tubeClicked } from "@/store/store";
+import { useList, useStore } from "effector-react";
+import { Tube } from "./Tube";
 import { WonScreen } from "./WonScreen";
 
 
 
 export const Playground: React.FC = () => {
   const moves = useStore($moves);
+  const state = useStore($state);
 
-  const isWon = false;
+  const isWon = state === 'won';
   const tubes = useList($field, 
-    ({ balls, over}, index) =>
+    ({ balls, over, complete}, index) =>
       <div>
-        <Tube tube={{ balls, over, complete: false }} position={index} onClick={tubeClicked}/>
+        <Tube tube={{ balls, over, complete }} position={index} onClick={tubeClicked}/>
       </div>
   )
 

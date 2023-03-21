@@ -1,4 +1,5 @@
-import { BallColor } from "@/types/balls"
+import { BallColor } from "@/types/types"
+import classNames from "classnames"
 import { Ball } from "./Ball"
 
 interface TubeProps {
@@ -17,7 +18,8 @@ export const Tube: React.FC<TubeProps> = ({ tube, position, onClick }) => {
       <div className='flex h-12 flex-col items-center justify-center border-b-4 border-b-white'>
         {tube.over !== null ? <Ball ball={tube.over} /> : null}
       </div>
-      <div data-complete={tube.complete} className='h-40 w-12 flex flex-col justify-end shrink-0 items-center border-2 border-white rounded-b-3xl'>
+      <div data-complete={tube.complete} 
+      className={classNames(`${tube.complete ? 'bg-white' : null}`, 'h-40 w-12 flex flex-col justify-end shrink-0 items-center border-2 border-white rounded-b-3xl ')}>
         {tube.balls.map((color, index) => (
           <Ball key={index} ball={color} />
         ))}

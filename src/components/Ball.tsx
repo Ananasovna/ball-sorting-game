@@ -1,4 +1,4 @@
-import { BallColor } from "@/types/balls";
+import { BallColor } from "@/types/types";
 import classNames from "classnames";
 
 interface BallProps {
