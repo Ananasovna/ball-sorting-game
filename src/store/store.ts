@@ -40,8 +40,6 @@ export const restartClicked = createEvent<React.MouseEvent<HTMLDivElement, Mouse
 export const toMainMenuClicked = createEvent<React.MouseEvent<HTMLDivElement, MouseEvent>>();
 export const tubeClicked = createEvent<React.MouseEvent<HTMLDivElement>>();
 
-
-
 export const tubeSelected = tubeClicked.map(event => 
 Number.parseInt(event.currentTarget.dataset.position ?? '', 10));
 const gameFinishedSuccessfully = createEvent();
@@ -65,7 +63,6 @@ generateTubesFX.use(({colorsCount}) => {
     (_, index) => (index % BALLS_IN_TUBE) as BallColor)
   );
 
-
   const filledTubes = Array.from({length: colorsCount}).map(() =>
     ({balls: Array.from({length: BALLS_IN_TUBE})
     .map(() => avaliableballs.pop()!
@@ -80,7 +77,6 @@ generateTubesFX.use(({colorsCount}) => {
 
 $tubes.on(generateTubesFX.doneData, (_, tubes) => tubes);
 $moves.reset(generateTubesFX);
-
 
 const tubeWillChange = sample ({
   clock: tubeSelected,
