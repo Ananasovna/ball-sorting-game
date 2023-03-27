@@ -24,7 +24,7 @@ export const Ball: React.FC<BallProps> = ({children, ball}) => {
   }
 
   return (
-    <div className={classNames(`${classes[ball]}`, 'h-8 w-8 rounded-full border-2 border-black m-1 shrink-0')} data-number={ball}>
+    <div className={classNames(`${classes[ball]}`, 'h-8 w-8 rounded-full  border-black m-1 shrink-0 inner-shadow-ball')} data-number={ball}>
       {children}
     </div>
   )

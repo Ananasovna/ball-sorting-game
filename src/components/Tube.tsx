@@ -19,7 +19,8 @@ export const Tube: React.FC<TubeProps> = ({ tube, position, onClick }) => {
         {tube.over !== null ? <Ball ball={tube.over} /> : null}
       </div>
       <div data-complete={tube.complete} 
-      className={classNames(`${tube.complete ? 'bg-white' : null}`, 'h-40 w-12 flex flex-col justify-end shrink-0 items-center border-2 border-white rounded-b-3xl ')}>
+      className={classNames(`${tube.complete ? 'bg-white' : 'bg-gray inner-shadow-tube'}`, 
+      'h-44 w-12 flex flex-col justify-end items-center border-2 border-white rounded-b-3xl ')}>
         {tube.balls.map((color, index) => (
           <Ball key={index} ball={color} />
         ))}
